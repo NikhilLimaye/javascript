@@ -1,0 +1,29 @@
+<!doctype html>
+<html>
+<head>
+	<title>Learning JS</title>
+	<meta charset = "utf-8">
+	<meta http-equiv="Content-type" content = "text/html" charset = "utf-8"/>
+</head>
+
+<body>
+	<p>How many fingers am I holding up?</p>
+	<input id="answer"/>
+	<button id="Submit">Submit</button>
+
+	<script type="text/javascript">
+		document.getElementById("Submit").onclick=function() {
+			var x = Math.random();
+			x = 10*x;
+			x = Math.floor(x);
+
+			if(x == document.getElementById("answer")) {
+				alert("Correct answer!");
+			}
+			else {
+				alert("Thats wrong! I had "+x+" fingers up.");
+			}
+		}
+	</script>
+</body>
+</head>
